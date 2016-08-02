@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sigup form</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <script>
+    $(function() {
+      $('#datepicker').datepicker();
+      $('#form').on('submit', function(e) {
+        e.preventDefault();
+        var name = $('#name').val();
+        if (name) {
+          window.alert('You are now signed up ' + name);
+        }
+      });
+    });
+  </script>
+  <style media="screen">
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Signup form</h1>
+
+  <form id="form">
+    <p>
+      Name:
+      <input type="text" id="name">
+    </p>
+    <p>
+      Birth Date:
+      <input type="text" id="datepicker">
+    </p>
+
+    <button>Submit</button>
+  </form>
+</body>
+
+</html>
