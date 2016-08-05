@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
   <script>
     $(function() {
-      $('#datepicker').datepicker();
+      $('#birthdate').datepicker();
       $('#form').on('submit', function(e) {
         e.preventDefault();
         var name = $('#name').val();
-        if (name) {
-          window.alert('You are now signed up ' + name);
+        var birthdate = $('#birthdate').val();
+        if (name && birthdate) {
+          window.alert('Signed up: ' + name + ' (born ' + birthdate + ')');
         }
       });
     });
@@ -36,7 +37,7 @@
     </p>
     <p>
       Birth Date:
-      <input type="text" id="datepicker">
+      <input type="text" id="birthdate">
     </p>
 
     <button>Submit</button>
