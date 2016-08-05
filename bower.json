@@ -14,8 +14,12 @@
     "bower_components",
     "test",
     "tests"
+<<<<<<< HEAD
   ],
   "dependencies": {
     "vaadin-date-picker": "^1.1.2"
   }
+=======
+  ]
+>>>>>>> 6c6a6805ff8f219d625503cb354a1fce180207b4
 }
